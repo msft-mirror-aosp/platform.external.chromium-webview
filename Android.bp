@@ -52,4 +52,8 @@ android_app_import {
             apk: "prebuilt/x86_64/webview.apk",
         },
     },
+    optional_uses_libs: [
+        "androidx.window.extensions",
+        "android.ext.adservices",
+    ],
 }
