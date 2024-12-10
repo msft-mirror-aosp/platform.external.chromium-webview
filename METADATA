@@ -1,22 +1,16 @@
-
 name: "WebView AOSP Prebuilt"
 description: "Prebuilt WebView AOSP"
 third_party {
-  type: VERSIONS
-  url {
-    type: HOMEPAGE
-    value: "https://www.google.com"
-  }
-  url {
-    type: GIT
-    value: "https://chromium.googlesource.com"
-  }
-  version: "128.0.6613.88"
   license_type: NOTICE
   license_note: "None"
   last_upgrade_date {
     year: 2024
     month: 10
     day: 21
+  }
+  identifier {
+    type: "Archive"
+    value: "https://chromium.googlesource.com"
+    version: "128.0.6613.88"
   }
 }
