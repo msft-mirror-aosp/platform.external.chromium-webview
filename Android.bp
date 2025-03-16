@@ -30,7 +30,22 @@ license {
     // large-scale-change unable to identify any license_text files
 }
 
-android_app_import {
+soong_config_module_type {
+    name: "webview_app_import",
+    module_type: "android_app_import",
+    config_namespace: "webview",
+    value_variables: [
+        "release_package_webview_version",
+    ],
+    properties: [
+        "arch.arm.apk",
+        "arch.arm64.apk",
+        "arch.x86.apk",
+        "arch.x86_64.apk",
+    ],
+}
+
+webview_app_import {
     name: "webview",
     product_specific: true,
     default_dev_cert: true,
@@ -38,18 +53,22 @@ android_app_import {
         "libwebviewchromium_loader",
         "libwebviewchromium_plat_support",
     ],
-    arch: {
-        arm: {
-            apk: "prebuilt/arm//webview.apk",
-        },
-        arm64: {
-            apk: "prebuilt/arm64/webview.apk",
-        },
-        x86: {
-            apk: "prebuilt/x86/webview.apk",
-        },
-        x86_64: {
-            apk: "prebuilt/x86_64/webview.apk",
+    soong_config_variables: {
+        release_package_webview_version: {
+            arch: {
+                arm: {
+                    apk: "%s/arm/webview.apk",
+                },
+                arm64: {
+                    apk: "%s/arm64/webview.apk",
+                },
+                x86: {
+                    apk: "%s/x86/webview.apk",
+                },
+                x86_64: {
+                    apk: "%s/x86_64/webview.apk",
+                },
+            },
         },
     },
     optional_uses_libs: [
