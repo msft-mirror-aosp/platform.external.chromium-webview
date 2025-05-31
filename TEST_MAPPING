@@ -1,20 +1,9 @@
 {
-  "presubmit": [
+  // Please do not add any configs in this file. All presubmit/postsubmit test
+  // configs belong in the unified TEST_MAPPING file linked below.
+  "imports": [
     {
-      "name": "CtsWebkitTestCases",
-      "options": [
-        {
-          "exclude-annotation": "androidx.test.filters.FlakyTest"
-        }
-      ]
-    },
-    {
-      "name": "CtsHostsideWebViewTests",
-      "options": [
-        {
-          "exclude-annotation": "androidx.test.filters.FlakyTest"
-        }
-      ]
+      "path": "frameworks/base/core/java/android/webkit"
     }
   ]
 }
