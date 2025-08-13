@@ -11,12 +11,12 @@ third_party {
     type: GIT
     value: "https://chromium.googlesource.com"
   }
-  version: "140.0.7339.4"
+  version: "140.0.7339.15"
   license_type: NOTICE
   license_note: "None"
   last_upgrade_date {
     year: 2025
     month: 8
-    day: 6
+    day: 13
   }
 }
